@@ -25,6 +25,7 @@
 // const fs = require('fs');
 // const input = fs.readFileSync('/dev/stdin').toString().split('\n');
 const input = '100';
+// const input = '189';
 const time = parseInt(input);
 
 console.log(solution(time));
