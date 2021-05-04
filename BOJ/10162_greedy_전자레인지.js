@@ -24,20 +24,20 @@
 
 // const fs = require('fs');
 // const input = fs.readFileSync('/dev/stdin').toString().split('\n');
-const input = '100';
-// const input = '189';
+// const input = '100';
+const input = '189';
 const time = parseInt(input);
 
 console.log(solution(time));
 
 function solution(T) {
-    let A = Math.trunc(T / 300);
-    let B = Math.trunc((T % 300) / 60);
-    let C = Math.trunc((T % 60) / 10);
-
     if (T % 10 !== 0) {
         return -1;
-    } else {
-        return A + " " + B + " " + C;
     }
+
+    let A = Math.trunc(T / 300);
+    let B = Math.trunc((T % 300) / 60);
+    let C = Math.trunc((T % 60) / 10);  // Math.trunc 사실상 안 해도 됨
+
+    return A + " " + B + " " + C;
 }

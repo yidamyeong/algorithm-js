@@ -1,5 +1,4 @@
-/**/
-const input = '5\n2\n2 4';
+const input = '10\n2\n1 8';
 // const input = '3\n1\n0';
 
 const NMX = input.split('\n');
