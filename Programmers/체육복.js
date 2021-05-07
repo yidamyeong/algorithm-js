@@ -69,7 +69,6 @@ function solution(n, lost, reserve) {
     return answer;
 }
 
-
 // mino
 function solution2(n, lost, reserve) {
     let students = Array(n).fill(1);
