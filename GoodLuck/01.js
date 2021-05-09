@@ -55,6 +55,8 @@ function solution(weights, head2head) {
         }
     });
     console.log(arraySort);
+    let as = arraySort.map(a => a.num);
+    console.log(as);
     let answer = [];
     for (let arr of arraySort) {
         answer.push(arr.num);
