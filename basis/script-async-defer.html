@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script async src="main.js"></script>
+    <!--    async 속성값(불리언 타입)의 장단점 !
+    병렬로 main.js를 다운받기 때문에
+    body 끝에 script 넣어줄 때보다 Fetching 이 파싱되는동안 병렬적으로 실행되어 시간 단축됨
+    하지만 타이밍이 안 좋으면 ...
+    -->
+    <script defer src="main2.js"></script>
+    <!-- HTML 이 Parsing 되는 동안 js 파일을 전부 fetching 시켜놓고,
+    parsing 이 끝나면 비로소 js 를 executing 하기 때문에 자바스크립트 파일이 순서 의존적이다 하더라도
+    문제 없음. 가장 효율적이고 안전한 방법! (추천) -->
+</head>
+<body>
+
+</body>
+</html>
