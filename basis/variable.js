@@ -5,7 +5,7 @@
 // flexible === dangerous
 // added ECMAScript 5 : 에크마스크립트 5에 선언된 것. 좀더 엄격하게 다룬다.
 
-// 2. Variable
+// 2. Variable, rw(read/write)
 // let (added in ES6)
 let globalName = 'global name';  // global 변수
 {  // Block Scope : 블럭 밖에서는 블럭 안의 코드에 접근할 수 없음
@@ -26,13 +26,22 @@ console.log(globalName);
 }
 console.log(age); // 블럭 밖에서 블럭 안으로 접근함. 블럭 개념이 없음
 
-// constants : 값을 선언함과 동시에 할당한 뒤로는 절대 값을 변경할 수 없다.
+// 3. Constant : 값을 선언함과 동시에 할당한 뒤로는 절대 값을 변경할 수 없다. r (read only)
 // favor immutable data type always for a few reasons:
 // - security : 보안상 이유. 해커들이 맘대로 바꿀 수 없음
 // - thread safety : 다양한 쓰레드들이 동시에 값에 접근해서 변경할 수 있는데, 여기로부터 자유로움
 // - reduce human mistakes
 // 값을 계속 변경할 수 있는 것을 Mutable 데이터 타입이라고 하고, let 이 여기에 해당한다.
 // const : immutable 데이터 타입이다.
+
+/** Note!
+ * Immutable data types: primitive types, frozen objects (i.e. object.freeze())
+ * Mutable data types: all objects by default are mutable in JS
+ * favor immutable data type always for a few reasons:
+ * -security
+ * -thread safety
+ * reduce human mistakes
+ */
 
 
 // 4. Variable types 변수의 데이터 타입!
