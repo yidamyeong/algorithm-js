@@ -1,20 +1,20 @@
 'use strict';
-// Object-oriendted programming
-// class: template
-// object: instance of a class
+// Object-oriented programming
+// class: template, 설계도
+// object: instance of a class 객체(인스턴스)
 // JavaScript classes
-//  - introduced in ES6
+//  - introduced in ES6 (클래스 도입된지 얼마 되지 않음)
+//    ㄴ 클래스 도입 전에는 클래스를 정의하지 않고 오브젝트를 만들 수 있었다.
 //  - syntactical sugar over prototype-based inheritance
 
 // 1. Class declarations
 class Person {
     // constructor
     constructor(name, age) {
-        // fields
+        // fields (멤버변수) 메소드 없이 필드만 있으면 데이터클래스라고 한다.
         this.name = name;
         this.age = age;
     }
-
     // methods
     speak() {
         console.log(`${this.name}: hello!`);
@@ -42,11 +42,12 @@ class User {
         // if (value < 0) {
         //   throw Error('age can not be negative');
         // }
+        // call stack 이 다 차도록 계속 불러내기때문에 변수명을 조금 다르게.
         this._age = value < 0 ? 0 : value;
     }
 }
 
-const user1 = new User('Steve', 'Job', -1);
+const user1 = new User('Steve', 'Jobs', -1);
 console.log(user1.age);
 
 // 3. Fields (public, private)
@@ -54,7 +55,7 @@ console.log(user1.age);
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Class_fields
 class Experiment {
     publicField = 2;
-    #privateField = 0;
+    privateField = 0;
 }
 const experiment = new Experiment();
 console.log(experiment.publicField);
