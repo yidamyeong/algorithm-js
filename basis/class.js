@@ -51,15 +51,15 @@ const user1 = new User('Steve', 'Jobs', -1);
 console.log(user1.age);
 
 // 3. Fields (public, private)
-// Too soon!
+// Too soon! 너무 최신임. 시기상조
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Class_fields
 class Experiment {
     publicField = 2;
-    privateField = 0;
+    #privateField = 0; // 해시태그를 붙이면 프라이빗
 }
 const experiment = new Experiment();
 console.log(experiment.publicField);
-console.log(experiment.privateField);
+console.log(experiment.privateField);  // undefined
 
 // 4. Static properties and methods
 // Too soon!
